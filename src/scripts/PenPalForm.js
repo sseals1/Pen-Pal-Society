@@ -14,18 +14,19 @@ import { letterBox } from "./LetterBox.js"
         <div class="field">
             ${AuthorDropdown()}
         </div>
+        <div class="letterbox">
+            ${letterBox()}
+        </div>
         <div class="field">
             ${Topics()}
         </div>
         <div class="field">
             ${RecipientsDropdown()}
         </div>
-        <div class="field">
-            ${letterBox()}
-        </div>
+        
 
-        <button class="button" id="submitRequest">Submit Request</button>
-    `
+        `
+        // <button class="button" id="submitRequest">Submit Request</button>
 
     return html
 }

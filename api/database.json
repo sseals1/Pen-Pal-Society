@@ -1,51 +1,61 @@
 {
-    "letters": [
-
-        { 
-            "id:": 1,
-            "authorId": 1,
-            "recipientId": 3,
-            "text": "Sample letter",
-            "topicId": 4
-            }
-            
-    ],
-
-    "users": [
-        {
-            "id:": 1,
-            "name": "Maya Angelou"
-        },
-        { 
-            "id": 2, 
-            "name": "Mark Twain"
-        },
-        {
-            "id": 3,
-            "name": "Grace Hopper"
-        }
-    ],
-    
-    "topics": [
-        {
-            "id": 1,
-            "type": "Business"
-        },
-        {
-            "id": 2, 
-            "type": "Friendly"
-        },
-        {
-            "id": 3, 
-            "type": "Family"
-        },
-        {
-            "id": 4,
-            "type": "Congratulations"
-        },
-        {
-            "id": 5, 
-            "type": "Condolences"
-        }
-    ]
+  "letters": [
+    {
+      "userId": 2,
+      "recipientId": 1,
+      "text": "test",
+      "topicId": 1,
+      "id": 12
+    },
+    {
+      "user": 1,
+      "recipient": 2,
+      "text": "This is a test",
+      "topic": 1,
+      "id": 13
+    },
+    {
+      "user": 3,
+      "recipient": 3,
+      "text": "test",
+      "topic": 1,
+      "id": 14
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Maya Angelou"
+    },
+    {
+      "id": 2,
+      "name": "Mark Twain"
+    },
+    {
+      "id": 3,
+      "name": "Grace Hopper"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "type": "Business"
+    },
+    {
+      "id": 2,
+      "type": "Friendly"
+    },
+    {
+      "id": 3,
+      "type": "Family"
+    },
+    {
+      "id": 4,
+      "type": "Congratulations"
+    },
+    {
+      "id": 5,
+      "type": "Condolences"
+    }
+  ]
 }

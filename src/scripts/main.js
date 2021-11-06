@@ -16,3 +16,12 @@ const render = () => {
 }
 
 render()
+
+mainContainer.addEventListener(
+    "stateChanged",
+    customEvent => {
+        render()
+        console.log("The Button is re-rendering the page")
+    }
+)
+
