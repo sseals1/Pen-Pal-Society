@@ -16,6 +16,7 @@ export const AuthorDropdown = () => {
       ${
         authors.map(
           (authorsObj) => {
+           
             return `
               <option value="${authorsObj.id}">${authorsObj.name}</option>
             `

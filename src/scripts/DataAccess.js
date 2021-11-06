@@ -1,12 +1,18 @@
 const API = "http://localhost:8088"
-
+const container = document.querySelector("#container") 
 
 const applicationState = {
-    authors: [],
+    users: [],
     topics: [],
-    recipients: [],
-    letters: []
-}
+    letters: [],
+
+    userChoices: 
+    {
+        topicRadioChoice: 0
+    }
+
+    }
+
 
 
 
@@ -16,7 +22,7 @@ export const fetchUsers = () => { // fetchRequest function that fetches data fro
         .then(
             (Author) => {
                 // Store the external state in application state
-                applicationState.authors = Author
+                applicationState.users = Author
             }
         )
 }
@@ -55,7 +61,7 @@ export const sendLetters = (userLetter) => {
     return fetch(`${API}/letters`, fetchOptions)
         .then(response => response.json())
         .then(() => {
-
+            container.dispatchEvent(new CustomEvent("stateChanged"))
         })
 }
 
@@ -64,7 +70,7 @@ export const sendLetters = (userLetter) => {
 
 
 export const getUsers = () => {
-    return applicationState.authors.map(fetchAuthors => ({ ...fetchAuthors }))
+    return applicationState.users.map(fetchUsers => ({ ...fetchUsers }))
 }
 
 
@@ -80,3 +86,6 @@ export const getLetters = () => {
     return applicationState.letters.map(fetchLetters => ({ ...fetchLetters }))
 }
 
+export const setTopics = (id) => {
+     applicationState.userChoices.topicRadioChoice = id
+}

@@ -1,9 +1,6 @@
 import { PenPalForm } from "./PenPalForm.js"
-import { AuthorDropdown } from "./Author.js"
-import { letterBox } from "./LetterBox.js"
-import { Topics } from "./Topics.js"
-import { RecipientsDropdown } from "./Recipients.js"
 import { SendLetterButtonHTML } from "./SendLetterButton.js"
+import { RenderLetter } from "./SendLetterButton.js"
 
 
 
@@ -14,7 +11,16 @@ export const PenPal = () => {
     <section class="penPalForm">
     ${PenPalForm()}
     </section>
+    <section class="letterButton">
+    ${SendLetterButtonHTML()}
+    </section>
+    <section class="letterBottom">
     <h2>Letters</h2>
+    </section>
+
+    <section class="renderLetter">
+    ${RenderLetter()}
+    </section>
     
     
     
@@ -28,6 +34,5 @@ export const PenPal = () => {
     // <section class="recipients">
     // ${RecipientsDropdown()}
     // <section class="sendLetter">
-    // ${SendLetterButtonHTML()}
     // ${PenPalForm()}
 }

@@ -1,5 +1,6 @@
 // module is responsible for generting the html for the Topics heading and topics radio buttons
 import { fetchTopics, getTopics } from "./DataAccess.js"
+import { setTopics } from "./DataAccess.js"
 
 
 
@@ -25,7 +26,6 @@ import { fetchTopics, getTopics } from "./DataAccess.js"
 export const Topics = () => {
     const topics = getTopics()
     let html = "<h3>Topics</h3>"
-
     // This is how you have been converting objects to <li> elements
     const listItems = topics.map(topicObj => {
         return `
@@ -38,3 +38,14 @@ export const Topics = () => {
     
     return html
 }
+
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "topics") {
+            setTopics(parseInt(event.target.value))
+            
+        }
+    }
+)
